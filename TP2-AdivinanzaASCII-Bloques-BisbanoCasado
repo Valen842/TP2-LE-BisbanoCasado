@@ -1,0 +1,26 @@
+#include <stdio.h>
+int x=0;
+
+int main(void){
+  printf ("Ingrese un carácter:\n");
+  char c;
+	c = getchar();
+  printf ("¿Cuál es el equivalente en ASCII?\n");
+  int num;
+  while(x==0){
+    scanf("%d",&num);
+    if (c==num)
+    {
+      x++;
+      printf ("El valor es correcto");
+    }else{
+      if (num<c){
+        printf ("El valor ingresado es menor\n");
+        printf ("Vuelva a ingresar un valor:\n");
+      }else if (num>c){
+          printf ("El valor ingresado es mayor\n");
+          printf ("Vuelva a ingresar un valor:\n");
+        }
+    }
+  }
+}
