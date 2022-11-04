@@ -1,0 +1,23 @@
+#include <stdio.h>
+float nota;
+float ingresonotas(void);
+
+int main(void) {
+  printf("El promedio es: %.2f", ingresonotas());
+  return 0;
+}
+
+float ingresonotas(void){
+  int cantidad=0;
+  float suma;
+  do{
+    printf("Ingrese la nota número %d\n", cantidad);
+    scanf("%f", &nota);
+    cantidad++;
+    suma=(suma+nota);
+  }while(nota!=-1);
+  cantidad--;
+  suma=(suma-nota);
+  float promedio=(suma/cantidad);
+  return promedio;
+}
